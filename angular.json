@@ -27,10 +27,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
-              "node_modules/jsqr/dist/jsQR.js"
+              "node_modules/jquery/dist/jquery.min.js",
             ],
             "es5BrowserSupport": true
           },

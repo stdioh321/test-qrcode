@@ -4,6 +4,7 @@ import { ZXingScannerModule } from '@zxing/ngx-scanner'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { NgQrScannerModule } from 'angular2-qrscanner';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ZXingScannerModule
+    ZXingScannerModule,
+    NgQrScannerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
