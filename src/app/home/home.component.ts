@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
   constructor() { }
   ngAfterViewInit() {
     // console.log("sadhasjdh");
-    window.myvar = this;
+    window['myvar'] = this;
     // this.result = window['myvar'];
     window.onload = (ev) => {
       HomeComponent.v = document.querySelector("#vid");
@@ -58,7 +58,7 @@ export class HomeComponent implements OnInit {
               if (res && res['data'] != "") {
                 console.log(res);
                 alert(res.data);
-                window.myvar.result = res.data;
+                window['myvar'].result = res.data;
               }
             });
         };
@@ -80,7 +80,7 @@ export class HomeComponent implements OnInit {
             }, 1200);
             console.log(res);
             // alert(res.data);
-            window.myvar.result = res.data;
+            window['myvar'].result = res.data;
           }
         });
     }
