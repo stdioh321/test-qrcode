@@ -1,18 +1,22 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6 col-12">
       <h3>
         Leitores de QR-Code
       </h3>
-      <input type="file" class="form-control mb-2" id="fImg" (change)="filePicked($event)" />
+
+      <div class="custom-file mb-2">
+        <input type="file" class="custom-file-input" class="custom-file-input" id="fImg" (change)="filePicked($event)">
+        <label class="custom-file-label" for="customFile">Escolha o seu QRCode</label>
+      </div>
+      <!-- <input type="file" class="custom-file-input mb-2" id="fImg" (change)="filePicked($event)" /> -->
       <img id="myimg" hidden>
       <video id="vid" autoplay="true"></video>
     </div>
-    <div class="col-md-6 pt-3">
-      <h4 class="text-success pulse-infinite">
-        {{result}}
-      </h4>
+    <div class="col-md-6 col-12">
+      <div class="text-success" id="output">
+      Output: <div class="pl-2 pulse-infinite">{{result}}</div>
+      </div>
     </div>
   </div>
 </div>
-

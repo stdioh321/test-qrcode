@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
       HomeComponent.v = document.querySelector("#vid");
       HomeComponent.myimg = document.querySelector("#myimg");
       HomeComponent.qr = new QrcodeDecoder();
-      navigator.mediaDevices.getUserMedia({ video: true })
+      navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } })
         .then(res => {
           console.log(res);
           HomeComponent.v['srcObject'] = res;
